@@ -1,0 +1,11 @@
+version: '3'
+services:
+  sample_backend:
+    build: .
+    environment:
+      WORKER_SMTP_PORT: 265
+      MONGO_URI: ${MONGO_URI}
+    ports:
+     - "8089:8089"
+    volumes:
+     - .:/code
